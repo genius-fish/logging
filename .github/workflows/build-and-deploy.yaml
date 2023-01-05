@@ -1,0 +1,22 @@
+name: Build and Deploy
+
+on:
+  push:
+    tags:
+      - v*.**
+
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PACKAGES_OWNER: ${{ secrets.PACKAGES_OWNER }}
+      GITHUB_PACKAGES_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - run: git fetch --all
+      - name: Test
+        run: sbt test
+      - name: Deploy
+        run: sbt publish
