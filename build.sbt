@@ -27,7 +27,7 @@ ThisBuild / credentials += Credentials(
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "fish/genius/logging",
+    name := "logging",
     libraryDependencies ++= Dependencies.Testing.*,
     libraryDependencies ++= Dependencies.LogUtils.*,
     libraryDependencies ++= Dependencies.GeniusFish.*
