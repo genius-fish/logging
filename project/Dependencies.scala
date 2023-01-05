@@ -18,8 +18,8 @@ object Dependencies {
     final val sourceCode = "com.lihaoyi" %% "sourcecode" % "0.3.0"
     final val * = Seq(nameof, sourceCode)
   }
-  object Config {
-    final val genius = "fish.genius" % "config_2.13" % "1.0.6"
-    final val * = Seq(genius)
+  object GeniusFish {
+    final val config = "fish.genius" % "config_2.13" % "1.0.6"
+    final val * = Seq(config)
   }
 }

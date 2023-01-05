@@ -30,5 +30,5 @@ lazy val root = project
     name := "fish/genius/logging",
     libraryDependencies ++= Dependencies.Testing.*,
     libraryDependencies ++= Dependencies.LogUtils.*,
-    libraryDependencies ++= Dependencies.Config.*
+    libraryDependencies ++= Dependencies.GeniusFish.*
   )
